@@ -1,0 +1,6 @@
+[core]
+	exludesfile = $HOME/.gitignore
+	excludesfile = $HOME/.gitignore
+[user]
+	email = me@danber.dev
+	name = Daniel Berendeev
