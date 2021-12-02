@@ -40,6 +40,13 @@ PS1=$PS1'\[$(vterm_prompt_end)\]'
 
 # Vterm end
 
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+    ssh-agent > "$XDG_RUNTIME_DIR/ssh-agent.env"
+fi
+if [[ ! "$SSH_AUTH_SOCK" ]]; then
+    source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
+fi
+
 alias ls='ls --color=auto'
 
 export NVM_DIR="$HOME/.nvm"
