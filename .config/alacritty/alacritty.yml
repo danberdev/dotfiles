@@ -42,6 +42,9 @@ font:
 
   use_thin_strokes: true
 
+env:
+  TERM: xterm-256color
+
 # Colors (Tomorrow Night)
 #colors:
   # Default colors
