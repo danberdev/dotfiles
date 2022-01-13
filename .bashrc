@@ -40,8 +40,18 @@ PS1=$PS1'\[$(vterm_prompt_end)\]'
 
 # Vterm end
 
+# SSH-agent autostart
+# if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+#     ssh-agent > "$XDG_RUNTIME_DIR/ssh-agent.env"
+# fi
+# if [[ ! "$SSH_AUTH_SOCK" ]]; then
+#     source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
+# fi
+
+# Nicer ls output
 alias ls='ls --color=auto'
 
+# NVM support
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -15,9 +15,10 @@ fi
 
 
 # User specific environment and startup programs
-export PATH="$HOME/.cargo/bin:/var/lib/snapd/snap/bin:$HOME/.local/bin:$HOME/node_modules:$PATH"
+export PATH="$HOME/.local/bin:~/.roswell/bin:$PATH"
 export EDITOR="emacs"
 export GO_PATH="$HOME/dev/go"
 export DOCKER_BUILDKIT=1
 export BROWSER="brave"
 #export QT_QPA_PLATFORM=wayland
+. "$HOME/.cargo/env"
